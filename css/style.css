@@ -5,10 +5,14 @@ h1, h2 {
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #ADB;
+ 	font-family: sans-serif;
+  	background-color: #ADB;
 }
 
 nav {
-  position: fixed; bottom: 10px; 
+  	position: fixed; bottom: 10px; 
+}
+
+a {
+	color: #222;
 }
