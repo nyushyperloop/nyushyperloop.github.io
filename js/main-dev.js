@@ -169,6 +169,7 @@
   };
 
   NodeGarden.prototype.toggleNightMode = function () {
+    this.nightMode = !this.nightMode;
     if (this.nightMode) {
       this.ctx.fillStyle = '#ffffff';
       main.style.color = '#EEE';
