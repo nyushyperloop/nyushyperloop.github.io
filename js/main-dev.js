@@ -156,7 +156,7 @@
 
     } else {
       this.ctx.fillStyle = '#000000';
-      main.style.color = '#EEE';
+      main.style.color = '#111';//EEE
     }
 
     // create nodes
