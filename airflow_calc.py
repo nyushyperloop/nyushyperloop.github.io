@@ -1,16 +1,14 @@
-//Hyperloop Airflow Calculator
-
 from math import pi
 import numpy as np
 
 import pylab as p
 
-from openmdao.main.api import Component
+import openmdao #from openmdao.main.api import Component
 from openmdao.lib.datatypes.api import Float
 
 from pycycle.flowstation import AirFlowStation, secant
 
-[docs]class TubeLimitFlow(Component): 
+class TubeLimitFlow(openmdao.Component): 
     """Finds the limit velocity for a body traveling through a tube"""
     #Inputs
     radius_tube = Float(111.5 , iotype="in", units="cm", desc="required radius for the tube")    
@@ -27,10 +25,9 @@ from pycycle.flowstation import AirFlowStation, secant
     W_kant = Float(iotype="out", desc="Kantrowitz limit flow", units="kg/s")
     #mu_air = Float(iotype="out", desc="dynamic viscosity of air", units="Pa*s")
 
-[docs]    def execute(self):
+    def execute(self):
 
-    	fs_tube = self.fs_tube = AirFlowStation()
-
+        fs_tube = self.fs_tube = AirFlowStation()
         tube_rad = self.radius_tube*0.0328084 #convert to ft
         inlet_rad = self.radius_inlet*0.0328084
 
@@ -66,7 +63,7 @@ from pycycle.flowstation import AirFlowStation, secant
         #self.mu_air = self.fs_tube.mu/0.671968975
 
 
-[docs]def plot_data(comp, c='b'):
+def plot_data(comp, c='b'):
     """utility function to make the Kantrowitz Limit Plot""" 
 
 
