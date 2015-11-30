@@ -14,7 +14,7 @@ h1, h2 {
 
 body {
  	font-family: sans-serif;
-  	background-color: #AEF;
+  	background-color: #EEE;
     color: #111;
 }
 
@@ -32,16 +32,26 @@ h4 {
 	font-size: 11px;
 }
 
+img { 
+  border-radius: 10px;
+  margin: 10px;
+}
+
 .discreet-text {
 	font-size: 13px; 
+  color: #888;
 
+}
+
+.logo {
+  float: left;
 }
 
 #container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 28%;
   height: 100%;
   overflow: hidden;
 }
